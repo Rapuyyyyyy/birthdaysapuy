@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Sapuyyy Sayang 💗</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#ff89b6; --pink-dark:#ff4f9a; --bg:#fff4f8; --card:#ffffffcc; --text:#55223a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text); background:var(--bg);
+      background-image:
+        radial-gradient(20px 18px at 20px 18px, #ffd1e4 30%, #ffd1e400 31%),
+        radial-gradient(20px 18px at 60px 48px, #ffe2ee 30%, #ffe2ee00 31%);
+      background-size:80px 80px;
+    }
+    .wrap{max-width:1000px;margin:auto;padding:24px}
+    .title{
+      font-family:"Great Vibes", cursive; font-size:clamp(36px,8vw,64px);
+      color:var(--pink-dark); text-align:center; margin:8px 0 10px;
+      text-shadow:0 2px 0 #fff, 0 6px 18px #ff7aa44d;
+    }
+    .subtitle{ text-align:center; margin:0 0 16px; opacity:.8 }
+
+    .btn{
+      display:inline-block; padding:12px 18px; border-radius:16px; border:0;
+      background:linear-gradient(180deg,var(--pink),var(--pink-dark));
+      color:#fff; font-weight:700; text-decoration:none; cursor:pointer;
+      box-shadow:0 8px 24px #ff4f9a40; transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow:0 10px 30px #ff4f9a55 }
+
+    .card{
+      background:var(--card); backdrop-filter: blur(6px);
+      border:1px solid #ffd9ea; border-radius:24px; padding:18px;
+      box-shadow:0 10px 30px #ff8ab33a;
+    }
+    label{ font-weight:600 }
+    .form{ display:grid; gap:12px; max-width:420px; margin:12px auto 0 }
+    input{
+      border:1.5px solid #ffc4df; border-radius:14px; padding:12px 14px;
+      font:inherit; background:#fff; outline:none;
+    }
+    input:focus{ border-color:var(--pink-dark); box-shadow:0 0 0 4px #ffb6d94d }
+    .hint{ font-size:12px; opacity:.7 }
+
+    .gallery{ display:none }
+    #unlocked:target{ display:block }
+    #unlocked:target ~ .gate{ display:none }
+
+    .audio{ display:flex; justify-content:center; margin-bottom:12px }
+    .audio audio{ width:min(560px,100%); border-radius:16px; border:1px solid #ffd9ea }
+
+    /* Slideshow */
+    .stage{
+      position:relative; margin:auto;
+      width:min(92vw, 420px);
+      aspect-ratio: 3 / 4;
+      border-radius:22px; overflow:hidden;
+      border:1px solid #ffd9ea; background:#fff; box-shadow:0 10px 30px #ff7aa42a;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .slide{
+      position:absolute; inset:0; opacity:0;
+      animation: show 80s linear 0s 1 forwards;
+    }
+    .slide img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    .slide:nth-child(1){animation-delay:0s}
+    .slide:nth-child(2){animation-delay:5s}
+    .slide:nth-child(3){animation-delay:10s}
+    .slide:nth-child(4){animation-delay:15s}
+    .slide:nth-child(5){animation-delay:20s}
+    .slide:nth-child(6){animation-delay:25s}
+    .slide:nth-child(7){animation-delay:30s}
+    .slide:nth-child(8){animation-delay:35s}
+    .slide:nth-child(9){animation-delay:40s}
+    .slide:nth-child(10){animation-delay:45s}
+    .slide:nth-child(11){animation-delay:50s}
+    .slide:nth-child(12){animation-delay:55s}
+    .slide:nth-child(13){animation-delay:60s}
+    .slide:nth-child(14){animation-delay:65s}
+    .slide:nth-child(15){animation-delay:70s}
+    .slide:nth-child(16){animation-delay:75s}
+
+    @keyframes show{
+      0%{opacity:0}
+      2%{opacity:1}
+      8%{opacity:1}
+      10%{opacity:0}
+      100%{opacity:0}
+    }
+
+    /* Ucapan di tengah slideshow */
+    .wish{
+      position:absolute; inset:0;
+      display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center;
+      background:linear-gradient(180deg,#fff9fcdd 0%, #fff4f8ee 100%);
+      opacity:0; animation: reveal 0.5s ease-in 80s forwards;
+      padding:20px;
+    }
+    @keyframes reveal{ to{ opacity:1 } }
+
+    .wish .msg{
+      font-family:"Great Vibes", cursive;
+      font-size:clamp(28px,6.6vw,48px);
+      color:var(--pink-dark);
+      text-shadow:0 2px 8px #ff92c433;
+      margin:0 0 10px;
+    }
+    .wish p{ margin:6px 0; opacity:.9 }
+
+    footer{ margin:24px 0 8px; text-align:center; font-size:12px; opacity:.6 }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Setelah Login -->
+  <section id="unlocked" class="gallery">
+    <div class="wrap">
+      <h1 class="title">Untuk Sapuyyy Sayang</h1>
+      <p class="subtitle"> “You are my favorite notification.”</p>
+
+      <div class="audio">
+        <audio id="bgm" controls loop>
+          <source src="assets/lagu.mp3" type="audio/mpeg"/>
+        </audio>
+      </div>
+
+      <div class="card">
+        <div class="stage">
+          <!-- 16 foto -->
+          <figure class="slide"><img src="assets/img1.jpg"></figure>
+          <figure class="slide"><img src="assets/img2.jpg"></figure>
+          <figure class="slide"><img src="assets/img3.jpg"></figure>
+          <figure class="slide"><img src="assets/img4.jpg"></figure>
+          <figure class="slide"><img src="assets/img5.jpg"></figure>
+          <figure class="slide"><img src="assets/img6.jpg"></figure>
+          <figure class="slide"><img src="assets/img7.jpg"></figure>
+          <figure class="slide"><img src="assets/img8.jpg"></figure>
+          <figure class="slide"><img src="assets/img9.jpg"></figure>
+          <figure class="slide"><img src="assets/img10.jpg"></figure>
+          <figure class="slide"><img src="assets/img11.jpg"></figure>
+          <figure class="slide"><img src="assets/img12.jpg"></figure>
+          <figure class="slide"><img src="assets/img13.jpg"></figure>
+          <figure class="slide"><img src="assets/img14.jpg"></figure>
+          <figure class="slide"><img src="assets/img15.jpg"></figure>
+          <figure class="slide"><img src="assets/img16.jpg"></figure>
+
+          <!-- Ucapan muncul di posisi slideshow -->
+          <div class="wish">
+            <h2 class="msg">Happy Birthday, My Love! 🎂💖</h2>
+            <p>May your day be filled with laughter, love, and endless happiness.</p>
+            <p>You deserve the world and more — because you are my world. ✨</p>
+            <p>I’m grateful for every smile you bring into my life. I love you always. 💞</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>Made with 💗 by Rapuyyyyyyy</footer>
+    </div>
+  </section>
+
+    <!-- Halaman Login -->
+  <section class="gate">
+    <div class="wrap">
+      <h1 class="title">Hai, Sayangku 💕</h1>
+      <p class="subtitle">Masuk dulu yaa…</p>
+
+      <div class="card" style="
+        background: linear-gradient(180deg,#fff9fcaa 0%, #ffe8f5cc 100%);
+        border: 2px solid #ffd5ea;
+        box-shadow: 0 8px 24px #ff9ac44d;
+      ">
+        <form class="form" action="#unlocked" method="get" style="gap:20px;">
+          <div>
+            <label for="user" style="font-size:16px;display:block;margin-bottom:6px;">
+              <span style="color:var(--pink-dark);font-weight:700;">Username</span>
+            </label>
+            <div style="position:relative;">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.6;">👤</span>
+              <input id="user" name="u" placeholder="raffa&lt;3shaffa" required
+                     pattern="raffa&lt;3shaffa"
+                     title="Masukkan tepat: raffa&lt;3shaffa"
+                     style="padding-left:40px;width:100%;font-size:15px;"/>
+            </div>
+            <small class="hint">Tulis: <b>raffa&lt;3shaffa</b></small>
+          </div>
+
+          <div>
+            <label for="pass" style="font-size:16px;display:block;margin-bottom:6px;">
+              <span style="color:var(--pink-dark);font-weight:700;">Password</span>
+            </label>
+            <div style="position:relative;">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;opacity:.6;">🔒</span>
+              <input id="pass" name="p" type="password" placeholder="31102025" required
+                     pattern="31102025"
+                     title="Masukkan tepat: 31102025"
+                     style="padding-left:40px;width:100%;font-size:15px;"/>
+            </div>
+            <small class="hint">Tanggal spesial kita 💘 (DDMMYYYY)</small>
+          </div>
+
+          <button class="btn" type="submit" style="
+            width:100%;font-size:16px;letter-spacing:.3px;
+            background:linear-gradient(90deg,#ff6faf,#ff8fcf);
+            animation:pulse 2.8s infinite alternate;
+          ">Masuk</button>
+
+          <small class="hint">Catatan: ini hanya login kejutan, semoga suka ya sayang.</small>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes pulse {
+      0% { box-shadow:0 0 12px #ff7bb540; transform:translateY(0); }
+      100% { box-shadow:0 0 24px #ff7bb580; transform:translateY(-1px); }
+    }
+    input:hover, input:focus {
+      border-color: var(--pink-dark);
+      box-shadow: 0 0 10px #ff8fcf66;
+      background: #fff8fb;
+      transition: all .3s ease;
+    }
+  </style>
+
+</body>
+</html>
